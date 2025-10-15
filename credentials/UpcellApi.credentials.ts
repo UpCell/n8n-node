@@ -31,7 +31,7 @@ export class UpcellApi implements ICredentialType {
 
 	test: ICredentialTestRequest = {
 		request: {
-			baseURL: 'https://app.upcell.io.com/v1',
+			baseURL: 'https://app.upcell.io/v1',
 			url: '/enrich/contactExistence',
 			method: 'POST',
 			body: {
