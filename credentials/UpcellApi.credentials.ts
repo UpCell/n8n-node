@@ -1,5 +1,6 @@
 import {
 	IAuthenticateGeneric,
+	ICredentialTestRequest,
 	ICredentialType,
 	INodeProperties,
 } from 'n8n-workflow';
@@ -24,6 +25,20 @@ export class UpcellApi implements ICredentialType {
 		properties: {
 			headers: {
 				Authorization: '={{$credentials.apiKey}}'
+			}
+		},
+	};
+
+	test: ICredentialTestRequest = {
+		request: {
+			baseURL: 'https://app.upcell.io.com/v1',
+			url: '/enrich/contactExistence',
+			method: 'POST',
+			body: {
+				contact: {
+					linkedinUrl: "https://www.linkedin.com/in/marklbedard"
+				},
+				existenceFields: ["mobile"]
 			}
 		},
 	};

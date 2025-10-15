@@ -1,4 +1,4 @@
-# n8n-nodes-_node-name_
+# n8n-nodes-upcellapi
 
 This is an n8n community node. It lets you use upcell in your n8n workflows.
 
